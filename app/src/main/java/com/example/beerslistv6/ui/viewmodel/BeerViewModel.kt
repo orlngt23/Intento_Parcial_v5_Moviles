@@ -1,9 +1,12 @@
 package com.example.beerslistv6.ui.viewmodel
 
+import android.text.Spannable.Factory
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.beerslistv6.BeerReviewerAplication
 import com.example.beerslistv6.data.model.BeerModel
 import com.example.beerslistv6.repository.repository
 
@@ -47,6 +50,15 @@ class BeerViewModel (private val repository: repository):ViewModel(){
     fun setSelectedBeer(beer: BeerModel){
         Name.value = beer.name
         Type.value = beer.type
+    }
+
+    companion object{
+        val Factory = viewModelFactory {
+            initializer {
+                val beerRepository = (this[APPLICATION_KEY] as BeerReviewerAplication).beerRepository
+                BeerViewModel(beerRepository)
+            }
+        }
     }
 
 }
