@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">beersListv6</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">listBeers</string>
+    <string name="title_app">List Beers</string>
+    <string name="name_beer">Corona</string>
+    <string name="type_beer">Light Lager</string>
+    <string name="name_beer_hint">Name Beer</string>
+    <string name="name_beer_type">Type Beer</string>
+    <string name="title_description_beer">Description Beer</string>
+    <string name="title_add_beer">Add New Beer</string>
+    <string name="desciption_photo">icon Beer</string>
 </resources>
