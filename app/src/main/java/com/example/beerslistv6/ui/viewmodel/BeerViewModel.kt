@@ -31,20 +31,25 @@ class BeerViewModel (private val repository: repository):ViewModel(){
 
     fun createBeer(): String{
       if(!validateData()){
-         status.value = "Wrong Information"
-          return "Wrong Information"
+         status.value = WRONG_INFORMATION
+          return WRONG_INFORMATION
       }
       val beer = BeerModel(
           name = Name.value!!,
           type = Type.value!!
       )
       addBeer(beer)
-      status.value = "Beer added "
-      return "Beer added"
+      status.value = BEER_ADDED
+      return BEER_ADDED
+    }
+
+    fun clearData(){
+        Name.value = ""
+        Type.value = ""
     }
 
     fun clearStatus(){
-        status.value = ""
+        status.value = INACTIVE
     }
 
     fun setSelectedBeer(beer: BeerModel){
@@ -59,6 +64,9 @@ class BeerViewModel (private val repository: repository):ViewModel(){
                 BeerViewModel(beerRepository)
             }
         }
+        const val BEER_ADDED  = "beer added to database"
+        const val WRONG_INFORMATION = "Wrong information"
+        const val INACTIVE = ""
     }
 
 }

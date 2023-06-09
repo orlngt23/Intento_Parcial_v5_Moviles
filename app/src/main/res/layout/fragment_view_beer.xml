@@ -4,7 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewBeerFragment">
+    tools:context=".ui.viewBeer.viewBeerFragment">
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.beerslistv6.ui.viewmodel.BeerViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

@@ -7,24 +7,24 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.beerslistv6.mainFragment"
+        android:name="com.example.beerslistv6.ui.main.mainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_formFragment"
-            app:destination="@id/formFragment" />
-        <action
             android:id="@+id/action_mainFragment_to_viewBeerFragment"
             app:destination="@id/viewBeerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_formBeerFragment"
+            app:destination="@id/formBeerFragment" />
     </fragment>
     <fragment
-        android:id="@+id/formFragment"
-        android:name="com.example.beerslistv6.formFragment"
-        android:label="fragment_form"
-        tools:layout="@layout/fragment_form" />
-    <fragment
         android:id="@+id/viewBeerFragment"
-        android:name="com.example.beerslistv6.viewBeerFragment"
+        android:name="com.example.beerslistv6.ui.viewBeer.viewBeerFragment"
         android:label="fragment_view_beer"
         tools:layout="@layout/fragment_view_beer" />
+    <fragment
+        android:id="@+id/formBeerFragment"
+        android:name="com.example.beerslistv6.ui.formBeer.formBeerFragment"
+        android:label="fragment_form_beer"
+        tools:layout="@layout/fragment_form_beer" />
 </navigation>
